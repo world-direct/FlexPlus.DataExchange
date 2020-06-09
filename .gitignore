@@ -348,3 +348,6 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+stylecop.json
+WorldDirect.EnergySolutions.ruleset
+FlexPlus.DataExchangeApiClient/Properties/launchSettings.json
