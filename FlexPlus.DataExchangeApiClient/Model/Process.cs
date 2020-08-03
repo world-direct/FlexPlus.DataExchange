@@ -32,32 +32,52 @@ namespace FlexPlus.DataExchangeApiClient.Model
         /// <summary>
         /// The PV011 process.
         /// </summary>
-        public static readonly Process Pv011 = new Process(6, "PV011", ProcessType.Upload);
+        public static readonly Process Pv011 = new Process(5, "PV011", ProcessType.Upload);
 
         /// <summary>
         /// The PV012 process.
         /// </summary>
-        public static readonly Process Pv012 = new Process(7, "PV012", ProcessType.Download);
+        public static readonly Process Pv012 = new Process(6, "PV012", ProcessType.Download);
 
         /// <summary>
         /// The PE003 process.
         /// </summary>
-        public static readonly Process Pe003 = new Process(8, "PE003", ProcessType.Upload);
+        public static readonly Process Pe003 = new Process(7, "PE003", ProcessType.Upload);
 
         /// <summary>
         /// The PE004 process.
         /// </summary>
-        public static readonly Process Pe004 = new Process(9, "PE004", ProcessType.Download);
+        public static readonly Process Pe004 = new Process(8, "PE004", ProcessType.Download);
 
         /// <summary>
         /// The PE005 process.
         /// </summary>
-        public static readonly Process Pe005 = new Process(10, "PE005", ProcessType.Upload);
+        public static readonly Process Pe005 = new Process(9, "PE005", ProcessType.Upload);
 
         /// <summary>
         /// The PE006 process.
         /// </summary>
-        public static readonly Process Pe006 = new Process(11, "PE006", ProcessType.Download);
+        public static readonly Process Pe006 = new Process(10, "PE006", ProcessType.Download);
+
+        /// <summary>
+        /// The PE009 process.
+        /// </summary>
+        public static readonly Process Pe009 = new Process(11, "PE009", ProcessType.Upload);
+
+        /// <summary>
+        /// The PV005 process.
+        /// </summary>
+        public static readonly Process Pv005 = new Process(12, "PV005", ProcessType.Upload);
+
+        /// <summary>
+        /// The PV006 process.
+        /// </summary>
+        public static readonly Process Pv006 = new Process(13, "PV006", ProcessType.Download);
+
+        /// <summary>
+        /// The PV007 process.
+        /// </summary>
+        public static readonly Process Pv007 = new Process(14, "PV007", ProcessType.Upload);
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Process"/> class.
