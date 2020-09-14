@@ -80,6 +80,41 @@ namespace FlexPlus.DataExchangeApiClient.Model
         public static readonly Process Pv007 = new Process(14, "PV007", ProcessType.Upload);
 
         /// <summary>
+        /// The PV008 process.
+        /// </summary>
+        public static readonly Process Pv008 = new Process(15, "PV008", ProcessType.Download);
+
+        /// <summary>
+        /// The PV009a process.
+        /// </summary>
+        public static readonly Process Pv009a = new Process(16, "PV009a", ProcessType.Upload);
+
+        /// <summary>
+        /// The PV009b process.
+        /// </summary>
+        public static readonly Process Pv009b = new Process(17, "PV009b", ProcessType.Upload);
+
+        /// <summary>
+        /// The PV010a process.
+        /// </summary>
+        public static readonly Process Pv010a = new Process(18, "PV010a", ProcessType.Download);
+
+        /// <summary>
+        /// The PV010b process.
+        /// </summary>
+        public static readonly Process Pv010b = new Process(19, "PV010b", ProcessType.Download);
+
+        /// <summary>
+        /// The PD001 process.
+        /// </summary>
+        public static readonly Process Pd001 = new Process(20, "PD001", ProcessType.Upload);
+
+        /// <summary>
+        /// The PD002 process.
+        /// </summary>
+        public static readonly Process Pd002 = new Process(21, "PD002", ProcessType.Download);
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="Process"/> class.
         /// </summary>
         /// <param name="id">The identifier.</param>
