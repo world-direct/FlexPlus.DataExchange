@@ -130,7 +130,7 @@ namespace FlexPlus.DataExchangeApiClient
         {
             await using var errorWriter = Console.Error;
 
-            if (response.StatusCode == HttpStatusCode.InternalServerError)
+            if (response.StatusCode == HttpStatusCode.InternalServerError || response.StatusCode == HttpStatusCode.BadRequest)
             {
                 var jsonStream = await response.Content.ReadAsStreamAsync().ConfigureAwait(false);
                 var jsonOptions = new JsonSerializerOptions()
