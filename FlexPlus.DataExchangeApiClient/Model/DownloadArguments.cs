@@ -41,5 +41,23 @@ namespace FlexPlus.DataExchangeApiClient.Model
         /// </value>
         [Option('e', "endpoint", HelpText = "The endpoint of the FlexPlus DataExchange API.", Required = true)]
         public string ApiEndpoint { get; set; }
+
+        /// <summary>
+        /// Gets or sets the value for the If-Modified-Since-Header.
+        /// </summary>
+        /// <value>
+        /// The modified since.
+        /// </value>
+        [Option("modified-since", HelpText = "Sets the timestamp for the If-Modified-Since-Header. Only available for process PV004 and PE004.")]
+        public string ModifiedSince { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether the If-Modified-Since-Header should be send or not.
+        /// </summary>
+        /// <value>
+        ///   <c>true</c> if [set if modified since header]; otherwise, <c>false</c>.
+        /// </value>
+        [Option("send-if-modified-header", Default = false, HelpText = "If set to true, a timestamp for the If-Modified-Since-Header must be set through option --modified-since <value>. Only available for process PV004 and PE004.")]
+        public bool SendIfModifiedSinceHeader { get; set; }
     }
 }

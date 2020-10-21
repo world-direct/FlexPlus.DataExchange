@@ -60,6 +60,22 @@ namespace FlexPlus.DataExchangeApiClient
             var apiEndpoint = new Uri(arguments.ApiEndpoint);
             using var client = GetClient(apiEndpoint, arguments.Token);
 
+            // Setting value for If-Modified-Since-Header
+            if (process.Equals(Process.Pe004) || process.Equals(Process.Pv004))
+            {
+                if (!arguments.SendIfModifiedSinceHeader && !string.IsNullOrEmpty(arguments.ModifiedSince))
+                {
+                    throw new ArgumentException("Whether set the --send-if-modified-header to false or give a timestamp for option --modified-since.");
+                }
+
+                var modifiedSince = DateTimeOffset.Now;
+                if (!string.IsNullOrEmpty(arguments.ModifiedSince) && DateTimeOffset.TryParse(arguments.ModifiedSince, out var tmp))
+                {
+                    modifiedSince = tmp;
+                }
+                client.DefaultRequestHeaders.IfModifiedSince = modifiedSince;
+            }
+            
             var response = await client.GetAsync(process.Name, CancellationToken.None).ConfigureAwait(false);
             if (response.IsSuccessStatusCode)
             {
